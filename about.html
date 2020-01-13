@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tomasz Karciarz</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/far.min.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>Witaj na mojej stronie!</h1>
+    </header>
+    <div id="content">
+      <nav>
+        <div class="MenuWrap">
+          <a href="./index.html" class="FirstItem">Główna</a>
+          <a href="./about.html" class="SelectedListItem">O mnie</a>
+          <a href="./contact.html" class="LastItem">Kontakt</a>
+        </div>
+        </nav>
+      </div>
+      <main>
+        <h2>O mnie</h2>
+        <img src="https://www.endomondo.com/resources/gfx/image/19295710/19fb3cf96a7039b28b270ba1ba4f039c/full.jpg" class="Center" alt="Moje zdjęcie">
+        <p>Nazywam się Tomasz Karciarz, mam 21 lat i jestem studentem 3 roku informatyki na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej.</p>
+        <h3>Moje informatyczne zainteresowania: </h3>
+        <p>Języki programowania:</p>
+          <ul>
+            <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html">Java</a></li>
+            <li><a href="https://julialang.org/">Julia</a></li>
+            <li><a href="https://www.mysql.com/">MySQL</a></li>
+          </ul>
+        <h3>Moje matematyczne zainteresowania: </h3>
+        <ul>
+          <li>Rachunek prawdopodobieństwa</li>
+          <li>Analiza matematyczna</li>
+        </ul>
+        <h3>Ciekawsze projekty programistyczne (zrealizowane bądź w trakcie realizacji):</h3>
+        <p>Zrealizowane:</p>
+        <ul>
+          <li><b>"Paint" (JavaFX)</b> - program m.in. umożliwiający rysowanie różnych figur geometrycznych (prostokąt, koło, wielokąt), kolorowanie, usuwanie oraz zapis zapis i odczyt rysunku w formacie TXT.</li>
+          <li><b>"Chinese Checkers" (JavaFX)</b> z Mateuszem Małeckim - gra zaprojektowana wg. zasad Chinese Checkers, w której może grać 2, 3, 4 bądź 6 zawodników (również możliwość zagrania z botami i z technologią klient-serwer).</li>
+          <li><b>Symulator wahadła podwójnego (JavaFX)</b> z Erykiem Trzeciakiewiczem, Danielem Kluską, Wojtkiem Kwaśniewiczem - program symulujący wahadło podwójne, możliwość podawania różnych parametrów i puszczania wahadła. </li>
+        </ul>
+        <p>W trakcie realizacji:</p>
+        <ul>
+          <li>"Milionerzy" (Java)</li>
+          <li>"Multiplayer Sudoku" (Java, MySQL, React.js)</li>
+        </ul>
+        <h3>Moje zainteresowania pozainformatyczne:</h3>
+        <ul><li>Jazda na rowerze (najdłuższa dystans: 106 km w 5 godzin 53 minuty)</li>
+            <li>Bieganie (najdłuższy dystans: 10 km w 1 godzinę 9 minut)</li>
+            <li>Czytanie książek</li>
+            <li>Pomaganie ludziom z matematyki</li>
+            <li>Dobra muzyka (w moim przypadku: trance, techno, rock...)</li>
+            <li>Oglądanie ulubionych sportów:
+            <ol>
+              <li>Tenis ziemny</li>
+              <li>Skoki narciarskie</li>
+              <li>Siatkówka</li>
+            </ol>
+            </li>
+        </ul>
+        <p><a href="https://www.endomondo.com/profile/20432402">Mój profil na Endomondo</a></p>
+        <p>Jeden z najbardziej spektakularnych fragmentów kodu poniżej: (do programu "Paint")</p>
+        <pre><code class="Java">
+public void load_file(ActionEvent event) throws FileNotFoundException
+{
+    new_drawing(event);
+    Scanner drawing_scanner = new Scanner(new File("C:\\Users\\xxxx\\Documents\\NetBeansProjects\\Paint\\drawing\\drawing.txt"));
+    drawing_scanner.useLocale(Locale.US);
+    while (drawing_scanner.hasNextLine())
+    {
+      try
+      {
+        String a = drawing_scanner.next();
+        if("Okrag".equals(a))
+        {
+              try
+              {
+                  while(drawing_scanner.hasNextDouble())
+                  {
+                    Circle circle_new = new Circle();
+                    String b = drawing_scanner.next();
+                    String c = drawing_scanner.next();
+                    String d = drawing_scanner.next();
+                    String e = drawing_scanner.next();
+                    String f = drawing_scanner.next();
+                    String g = drawing_scanner.next();
+                    String h = drawing_scanner.next();
+                    circle_new.setCenterX(Double.parseDouble(b));
+                    circle_new.setCenterY(Double.parseDouble(c));
+                    circle_new.setRadius(Double.parseDouble(d));
+                    circle_new.setScaleX(Double.parseDouble(e));
+                    try
+                    {
+                        circle_new.setFill(valueOf(f)); 
+                        circle_new.setStroke(valueOf(g));
+                    }
+                    catch (IllegalArgumentException ex)
+                    { 
+                    }
+                    circle_new.setStrokeWidth(Double.parseDouble(h));
+                    drawing_pane.getChildren().add(circle_new);
+                    circleList.add(circle_new);
+                    shapesList.add(circle_new);
+                  }
+              }
+              catch (NumberFormatException e)
+              {
+              }
+        }
+        if("Prostokat".equals(a))
+        {
+            try
+            {
+                while (drawing_scanner.hasNextDouble())
+                {
+                        Rectangle rectangle_new = new Rectangle();
+                        String b = drawing_scanner.next();
+                        String c = drawing_scanner.next();
+                        String d = drawing_scanner.next();
+                        String e = drawing_scanner.next();
+                        String f = drawing_scanner.next();
+                        String g = drawing_scanner.next();
+                        String h = drawing_scanner.next();
+                        String j = drawing_scanner.next();
+                        rectangle_new.setX(Double.parseDouble(b));
+                        rectangle_new.setY(Double.parseDouble(c));
+                        rectangle_new.setWidth(Double.parseDouble(d));
+                        rectangle_new.setHeight(Double.parseDouble(e));
+                        rectangle_new.setScaleX(Double.parseDouble(f));
+                        rectangle_new.setScaleY(Double.parseDouble(f));
+                        try
+                        {
+                            rectangle_new.setFill(valueOf(g));
+                            rectangle_new.setStroke(valueOf(h));
+                        }
+                        catch (IllegalArgumentException ex)
+                        {
+                            System.out.println("CATCH OF THE YEAR");
+                        }
+                      
+                        rectangle_new.setStrokeWidth(Double.parseDouble(j));
+                        drawing_pane.getChildren().add(rectangle_new);
+                        rectangleList.add(rectangle_new);
+                        shapesList.add(rectangle_new);
+                }
+            }
+            catch (NumberFormatException e)
+            {
+            }  
+        }
+        if("Wielokat".equals(a))
+        {
+            try
+            {
+                while (drawing_scanner.hasNextDouble())
+                {
+                    Polygon polygon_new = new Polygon();
+                    String b = drawing_scanner.next();
+                    for(int j=0; j &lt; Integer.parseInt(b)/2; j++)
+                    {
+                        String c = drawing_scanner.next();
+                        String d = drawing_scanner.next();
+                        polygon_new.getPoints().addAll(Double.parseDouble(c), Double.parseDouble(d));
+                        polypointsList.add(Double.parseDouble(c));
+                        polypointsList.add(Double.parseDouble(d));
+                        polypointsconstList.add(Double.parseDouble(c));
+                        polypointsconstList.add(Double.parseDouble(d));
+                    }
+                    String e = drawing_scanner.next();
+                    String f = drawing_scanner.next();
+                    String g = drawing_scanner.next();
+                    String h = drawing_scanner.next();
+                    polygon_new.setScaleX(Double.parseDouble(e));
+                    polygon_new.setScaleY(Double.parseDouble(e));
+                    try
+                    {
+                        polygon_new.setFill(valueOf(f));
+                        polygon_new.setStroke(valueOf(g));
+                    }
+                    catch (IllegalArgumentException ex)
+                    {
+                        
+                    }
+                    polygon_new.setStrokeWidth(Double.parseDouble(h));
+                    drawing_pane.getChildren().add(polygon_new);
+                    polygonList.add(polygon_new);
+                    shapesList.add(polygon_new);
+                }
+            }
+            catch (NumberFormatException e)
+            {
+                
+            }
+        }
+      }
+      catch (NoSuchElementException ex)
+      {
+      }
+    }
+    drawing_scanner.close();
+}
+        </code></pre>
+      </main>
+    </div>
+    <footer>
+     Copyright &copy; 2019 Tomasz Karciarz
+    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+  <script src="/path/to/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Poprawny CSS!" /></a>
+  </p>    
+</body>
+</html>

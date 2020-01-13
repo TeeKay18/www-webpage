@@ -1,0 +1,143 @@
+body
+{
+  background-color: #eeeeee;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main
+{
+  background-color: #ffffff;
+}
+
+main a
+{
+  text-decoration: none;
+  color: #0000ff;
+}
+
+header
+{
+  padding-top: 0.01rem; 
+  padding-bottom: 0.01rem;
+  background-color: #7db904; 
+  color: #ffffff;
+  text-align: center;
+}
+
+footer
+{
+    clear: both; 
+    padding: 10px; 
+    background-color: #999999; 
+    text-align: right;
+    color: #ffffff;
+}
+
+h2
+{
+    text-align: center;
+}
+
+button
+{
+    border-width: 0.2rem;
+    border-color: #ff0000;
+    border-radius: 10%;
+    background-color: #ffff00;
+    color: #ff0000;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#container
+{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#content
+{
+  padding: 10px;
+}
+
+.MenuWrap 
+  {
+    background-color: #ff0000;
+    font-size: 1.7rem;
+    min-height: 2.75rem;
+    display: flex;
+    flex-direction: column; /*dodane*/
+    align-items: center;
+    padding: 0 1rem;  
+  }
+
+.ListItem,.LastItem, .SelectedListItem, .SelectedLastItem, .FirstItem, .SelectedFirstItem
+{
+  color: #ebebeb;
+  text-decoration: none;
+}
+
+.SelectedFirstItem, .SelectedListItem, .SelectedLastItem
+{
+  font-weight: bold;
+}
+
+.Center
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 600px)
+{
+  body, button 
+  {
+    font-size: 1.5rem;
+  }
+  p, td, li, dd, dt, h1, h2, h3 
+  {
+    padding: 0.001rem;
+  }
+  .MenuWrap 
+  {
+    background-color: #ff0000;
+    font-size: 1.5rem;
+    min-height: 2.75rem;
+    display: flex;
+    flex-direction: row; /*dodane*/
+    align-items: center;  
+    padding: 0 1rem;
+  }
+  .FirstItem, .SelectedFirstItem
+  {
+      margin-left: 0;
+  }
+  .ListItem, .SelectedListItem
+  {
+      margin-left: 1rem;
+  }
+  .LastItem, .SelectedLastItem
+  {
+      margin-left: auto;
+  }
+  header
+  {
+      background: linear-gradient(to right, rgba(150,204,0,1) 0%, rgba(87,159,20,1) 80%, rgba(87,159,20,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96cc00', endColorstr='#579f14', GradientType=1 );
+  }
+  .MenuWrap
+  {
+      background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(240,47,23,1) 19%, rgba(246,41,12,1) 53%, rgba(241,111,92,1) 77%, rgba(231,56,39,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+  }
+  footer
+  {
+      background: linear-gradient(to right, rgba(43,39,39,1) 0%, rgba(75,68,67,1) 32%, rgba(143,130,127,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2727', endColorstr='#8f827f', GradientType=1 );
+  }
+
+
+}

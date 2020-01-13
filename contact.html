@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tomasz Karciarz</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>Witaj na mojej stronie!</h1>
+    </header>
+    <div id="content">
+      <nav>
+        <div class="MenuWrap">
+          <a href="./index.html" class="FirstItem">Główna</a>
+          <a href="./about.html" class="ListItem">O mnie</a>
+          <a href="./contact.html" class="SelectedLastItem">Kontakt</a>
+        </div>
+      </nav>
+      <main>
+        <h2>Dane kontaktowe</h2>
+        <h3>Telefon komórkowy: </h3> 
+        <p>(+48) 791867111</p>
+        <h3>Adres e-mail:</h3> 
+        <script src="./email.js"></script>
+        <noscript>
+          <p>&#116;&#111;&#109;&#97;&#115;&#122;&#46;&#107;&#97;&#114;&#99;&#105;&#97;&#114;&#122;&#64;&#112;&#119;&#114;&#46;&#101;&#100;&#117;&#46;&#112;&#108;</p>
+          <style>
+              #email, #button 
+              { 
+                display:none;
+              }
+          </style>
+        </noscript>
+        <p id="email">Kliknij przycisk poniżej o nazwie "Kliknij", żeby zobaczyć mój adres e-mail.</p>
+        <button id="button" onclick="get_email()">Kliknij</button>
+      </main>
+    </div>
+    <footer>
+        Copyright &copy; 2019 Tomasz Karciarz
+    </footer>
+  </div>
+  <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Poprawny CSS!" /></a>
+  </p>    
+</body>
+</html>
